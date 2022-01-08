@@ -1,0 +1,26 @@
+#quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  font-size: 18px;
+}
+
+#quote span:last-child {
+  margin-top: 5px;
+}
+
+#greeting {
+  margin-bottom: 20px;
+  font-size: 64px;
+}
+
+#clock {
+  font-size: 150px;
+  margin-bottom: 0px;
+}
+
+#weather {
+  font-size: 18px;
+}

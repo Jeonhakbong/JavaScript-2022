@@ -10,12 +10,11 @@ const images = [
   "7.jpg",
   "8.jpg",
   "9.jpg",
-  "10.jpg",
-  "11.jpg",
 ];
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
 
 const bgImage = document.createElement("img"); // create html tag
+bgImage.id = "background-img";
 bgImage.src = "img/" + chosenImage;
 document.body.appendChild(bgImage);

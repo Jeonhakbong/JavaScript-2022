@@ -1,3 +1,25 @@
+@import "form.css";
+@import "others.css";
+
+body {
+  margin: 0px;
+  width: 100%;
+  height: 790px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-family: "Rubik", sans-serif;
+}
 .hidden {
   display: none;
+}
+.main-box {
+  position: absolute;
+  height: 790px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

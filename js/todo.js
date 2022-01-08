@@ -14,15 +14,20 @@ function saveToDo() {
 
 function deleteToDo(event) {
   const li = event.target.parentElement;
+  // recreate toDoArray except the item of which id equals to li.id
+  toDoArray = toDoArray.filter((toDo) => toDo.id !== parseInt(li.id));
   li.remove();
+  saveToDo(); // run function one more time to save new array
 }
 
-function addtToDo(newToDo) {
+function addtToDo(newToDoObj) {
   const toDoli = document.createElement("li");
+  toDoli.id = newToDoObj.id;
+
   const toDoSpan = document.createElement("span");
   const button = document.createElement("button");
 
-  toDoSpan.innerText = newToDo;
+  toDoSpan.innerText = newToDoObj.text;
   button.innerText = "❌";
 
   toDoli.appendChild(toDoSpan);
@@ -35,9 +40,15 @@ function handleToDoSubmit(event) {
   event.preventDefault(); // submit 의 경우 새로고침이 되므로 이를 방지
   const newToDo = toDoInput.value;
   toDoInput.value = "";
-  toDoArray.push(newToDo);
-  addtToDo(newToDo);
-  saveToDo();
+
+  // create object variables
+  const newToDoObj = {
+    text: newToDo,
+    id: Date.now(),
+  };
+  toDoArray.push(newToDoObj);
+  addtToDo(newToDoObj); // show new todo on webpage
+  saveToDo(); // save on localStorage
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
@@ -46,9 +57,8 @@ const savedToDoArray = localStorage.getItem(TODOARRAY_KEY);
 
 if (savedToDoArray) {
   // array is not null.
-  // JSON.parse : string -> object/arry
+  // JSON.parse : string -> object/array
   const parsedToDoArray = JSON.parse(savedToDoArray);
   toDoArray = parsedToDoArray; // load previous array
-  parsedToDoArray.forEach(addtToDo);
-} else {
+  parsedToDoArray.forEach(addtToDo); // each item
 }

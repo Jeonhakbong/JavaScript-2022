@@ -1,0 +1,49 @@
+input {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  color: whitesmoke;
+}
+
+input::placeholder {
+  color: whitesmoke;
+  text-align: center;
+  border: none;
+  border-bottom: solid 0.3px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+#login-form {
+  margin: 40px 0px 5px 0px;
+}
+
+#login-form input {
+  height: 50px;
+  width: 300px;
+  font-size: 32px;
+}
+
+#login-form input::placeholder {
+  font-size: 32px;
+}
+
+#todo-form input {
+  width: 270px;
+  font-size: 18px;
+}
+
+#todo-form input::placeholder {
+  font-size: 18px;
+}
+
+#todo-list {
+  font-size: 16px;
+}
