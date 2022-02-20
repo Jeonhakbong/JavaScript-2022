@@ -30,3 +30,18 @@
 #weather {
   font-size: 18px;
 }
+
+#select-box {
+  width: 250px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.fas {
+  color: var(--default-color);
+}
+
+.divide-line {
+  border-left: solid var(--default-color);
+}
