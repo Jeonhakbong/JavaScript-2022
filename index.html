@@ -8,12 +8,13 @@
     <title>My Chrome Home</title>
   </head>
   <body>
-    <div class="main-box">
-      <h2 id="clock">00:00:00</h2>
+    <div id="main-box">
+      <h2 id="clock" class="focus-in-expand">00:00:00</h2>
       <div id="weather">
         <span></span>
         <span></span>
       </div>
+
       <form id="login-form" class="hidden">
         <input
           required
@@ -23,11 +24,38 @@
         />
         <input class="hidden" type="submit" value="Log In" />
       </form>
+
       <h1 id="greeting" class="hidden"></h1>
+
+      <div id="select-box" class="fade-in-top">
+        <button id="list-show-btn"><i class="fas fa-check fa-2x"></i></button>
+        <div class="divide-line"></div>
+        <button id="search-show-btn">
+          <i class="fas fa-search fa-2x"></i>
+        </button>
+      </div>
+
       <form id="todo-form">
-        <input type="text" placeholder="What's your things to do, today?" />
+        <input required type="text" placeholder="What are your to-dos today?" />
       </form>
       <ul id="todo-list"></ul>
+
+      <form
+        id="search-form"
+        class="hidden"
+        method="get"
+        action="https://www.google.com/search"
+        target="_blank"
+      >
+        <input
+          required
+          type="text"
+          name="q"
+          placeholder="Search your interest!"
+        />
+        <input class="hidden" type="submit" value="Search" />
+      </form>
+
       <div id="quote">
         <span></span>
         <span></span>
@@ -40,5 +68,10 @@
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/quote.js"></script>
+    <script src="js/select.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

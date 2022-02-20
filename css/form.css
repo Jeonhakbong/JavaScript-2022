@@ -1,49 +1,88 @@
 input {
   background-color: transparent;
   border: none;
+  text-align: center;
   font-size: 18px;
-  color: whitesmoke;
+  border-bottom: solid 0.3px;
+  color: var(--default-color);
 }
 
 input::placeholder {
-  color: whitesmoke;
+  color: var(--default-color);
   text-align: center;
   border: none;
-  border-bottom: solid 0.3px;
 }
 
 input:focus {
   outline: none;
+  border-bottom: solid 0.3px;
 }
 
 button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
+/* login form */
 #login-form {
-  margin: 40px 0px 5px 0px;
+  margin: 40px 0px 15px 0px;
+  animation: fade-in-top 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation-delay: 0.4s;
 }
 
 #login-form input {
   height: 50px;
   width: 300px;
   font-size: 32px;
+  transition: width 0.5s ease-in-out;
+}
+
+#login-form input:focus {
+  width: 310px;
 }
 
 #login-form input::placeholder {
   font-size: 32px;
 }
 
+/* todo form */
+#todo-list {
+  font-size: 16px;
+  animation: fade-in-top 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation-delay: 1s;
+}
+
+#todo-form {
+  animation: fade-in-top 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation-delay: 1s;
+}
+
 #todo-form input {
-  width: 270px;
+  width: 250px;
   font-size: 18px;
+  transition: width 0.5s ease-in-out;
+}
+
+#todo-form input:focus {
+  width: 260px;
 }
 
 #todo-form input::placeholder {
   font-size: 18px;
 }
 
-#todo-list {
-  font-size: 16px;
+/* search form*/
+#search-form {
+  animation: fade-in-top 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation-delay: 1s;
+}
+
+#search-form input {
+  width: 180px;
+  transition: width 0.5s ease-in-out;
+}
+
+#search-form input:focus {
+  width: 190px;
 }
